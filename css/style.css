@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --primary-color: #6d724e;
+    --secondary-color: #e2e2e1;
+    --body-background-color:#eceee8;
+    --base-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    --outline-default: border: 1px solid black;
+    --jumbotron-img: url('../assets/library-main.jpg');
+    --success-color: rgb(8, 124, 8);
+    --done-color: rgb(8, 124, 8);
+    --name-footer-color: #333;
+    --failed-color: rgb(241, 8, 8);
+    --outline: 1px solid black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: var(--font-primary);
+    background-color: var(--body-background-color);
+}
+
+input, button {
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 80px;
+    background-image: var(--jumbotron-img);
+    text-align: center;
+    text-shadow: var(--base-shadow);
+    color: hwb(0 13% 87%);
+}
+
+.year {
+    color: var(--primary-color);
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.footerName {
+    color: var(--name-footer-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.black {
+    color: black;
+}
+
+footer {
+  padding: 18px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    max-height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+    font-weight: bolder;
+    text-shadow: var(--base-shadow);
+}
+
+nav .navigation {
+    width: 70%;
+    text-align: center;
+}
+
+nav .navigation > a {
+    display: inline;
+    list-style-type: none;
+    float: left;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+header {
+    display: inline;
+}
+
+.head_bar {
+    display: inline;
+}
+
+main {
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.author {
+    font-weight: bold;
+    font-style:oblique;
+}
+
+.authoryear {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: var(--primary-color);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    background-color: #fff;
+    border: var(--outline);
+}
+
+
+.input_section > form > .input > label {
+    color:var(--primary-color);
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.input_section > form > .input_inline > label {
+    color: #abc07d;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    display: flex;
+    height: auto;
+    width: 30%;
+    float: right;
+}
+
+.search_section > form {
+    width: 100%;
+    display: inline;
+}
+
+.search_section > form > .input {
+    display: inline;
+    align-items: center;
+}
+
+.search_section > form > .input > input {
+  display: block;
+  padding: 12px 12px 12px 30px;
+  border: 0;
+  float: right;
+  margin-right: 20px;
+  width: 80%;
+  height: fit-content;
+  background-color: #ffff;
+  background-image: url("../assets/searchicon.png");
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  margin: 1;
+}
+
+.book_shelf {
+    margin: 10px 0 0 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.book_shelf > h2 {
+    color: var(--primary-color);
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    display: inline-block;
+    padding: 8px 5px 5px 16px;
+    box-shadow: 2px 4px 8px 2px rgba(3, 3, 3, 0.2);
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 45%;
+    margin: 10px;
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    background-color: #fff;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+.check-button {
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/check.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button {
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/trash.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button {
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/undo-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.update-button {
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/edit.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('../assets/check-fill.svg');
+    background-size: contain;
+}
+
+.trash-button:hover {
+    background: url('../assets/trash-fill.svg');
+    background-size: contain;
+}
+
+.undo-button:hover {
+    background: url('../assets/undo-fill.svg');
+    background-size: contain;
+}
+
+.update-button:hover {
+    background: url('../assets/edit-fill.svg');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button .update-button {
+    outline: none;
+}
+
+#add_nav {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/nav/add.svg');
+    background-size: contain;
+    text-align: center;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#incomplete_nav {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/nav/undone.svg');
+    background-size: contain;
+    text-align: center;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#complete_nav {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/nav/done.svg');
+    background-size: contain;
+    text-align: center;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#add_nav:hover {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/nav/add-fill.svg');
+    background-color: #fff;
+    background-size: contain;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#incomplete_nav:hover {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/nav/undone-fill.svg');
+    background-size: contain;
+    text-align: center;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#complete_nav:hover {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/nav/done-fill.svg');
+    background-size: contain;
+    text-align: center;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#completed {
+    color: var(--done-color);
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -125px;
+    background-color: #fff;
+    box-shadow: var(--base-shadow);
+    color: var(--primary-color);
+    text-align: center;
+    border-radius: 2px;
+    border: var(--outline);
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 90px;
+}
+
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+input::-webkit-inner-spin-button {
+	opacity: 1;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 90px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 90px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 90px; opacity: 0;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 90px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 1000px) {
+    .search_section {
+        visibility: hidden;
+    }
+
+    .book_shelf > .book_list > .book_item {
+        width: 100%;
+    }
+
+}

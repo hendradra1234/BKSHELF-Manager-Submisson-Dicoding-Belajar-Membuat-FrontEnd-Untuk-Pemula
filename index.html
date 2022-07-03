@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>BKSHELF Apps</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/animation.js"></script>
+
+    <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  </head>
+
+  <body>
+    <header class="head_bar">
+      <div class="jumbotron">
+        <h1 class="bold">BKSHELF MANAGER</h1>
+        <p class="black">Provide New Way to Improve Your Book Management.</p>
+      </div>
+
+      <nav>
+        <div class="navigation">
+          <a href="#input_form_title" id = 'add_nav'></a>
+          <a href="#incompleteBookshelfList" id = 'incomplete_nav'></a>
+          <a href="#completeBookshelfList" id = 'complete_nav'></a>
+        </div>
+
+        <div class="search_section">
+          <form id="searchBook">
+            <div class="input">
+              <input id="searchBookByTitle" placeholder="Search Book" type="search">
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="input_section">
+        <h2 id="input_form_title">Add New Book</h2>
+        <form id="inputBook" class="submited">
+          <div class="input">
+            <label for="inputBookTitle">Title</label>
+            <input id="inputBookId" type="hidden">
+            <input id="inputBookTitle" placeholder="Title" type="text" required>
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Author</label>
+            <input id="inputBookAuthor" placeholder="Author" type="text" required>
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Year</label>
+            <input id="inputBookYear" placeholder="Year" min="1000" max="3000" step="1" type="number" required>
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete" id="complated">Finish Reading</label>
+            <input id="inputBookIsComplete" type="checkbox">
+          </div>
+          <button id="bookSubmit" type="submit">Add to Shelf <span id = "status">Belum selesai dibaca</span></button>
+        </form>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list">
+        </div>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList" class="book_list">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright <span id="footer-year"></span>. <a href="https://github.com/hendradra1234" class="footerName">Hendrakho
+      </a> Dicoding Submission Belajar Membuat Front-End Web untuk Pemula</p>
+    </footer>
+
+    <div id="snackbar" class="hidden">
+      <h3 id="message_toast">Message</h3>
+    </div>
+
+    <script src="js/domFunction.js"></script>
+    <script src="js/domEvent.js"></script>
+  </body>
+</html>
